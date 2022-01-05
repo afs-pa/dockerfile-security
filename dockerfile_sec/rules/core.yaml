@@ -25,6 +25,6 @@
   severity: Low
 - id: core-007
   description: Use image tag instead of SHA256 hash
-  regex: '^(?!(FROM[\s]+[\w\d\_]+\@sha256\:[\d\w]{64}))'
+  regex: '^[\s]*FROM[\s]+[\w\d\_\-\.\/]+\@sha256\:[\d\w]{64}'
   reference: https://medium.com/@tariq.m.islam/container-deployments-a-lesson-in-deterministic-ops-a4a467b14a03
   severity: Medium

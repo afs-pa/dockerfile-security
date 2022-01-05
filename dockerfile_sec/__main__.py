@@ -165,7 +165,7 @@ def analyze(args: argparse.Namespace):
         if rule["id"] in ignores:
             continue
 
-        regex = re.search(rule["regex"], dockerfile_content)
+        regex = re.search(rule["regex"], dockerfile_content, flags=re.MULTILINE)
 
         if regex:
             res = rule.copy()
